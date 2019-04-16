@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using DotNetWebApiBook.DbContexts;
+using DotNetWebApiBook.Model;
+using DotNetWebApiBook.Repository;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -28,9 +30,17 @@ namespace DotNetWebApiBook
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
-            services.AddDbContext<BookContext>(options => options.UseSqlite("Data Source=BookApp.db"));
-            //services.AddDbContext<BookContext>(options => options.UseSqlite(Configuration.GetConnectionString("DefaultConnection")));
-            //services.AddDbContext<BookContext>(x => x.UseSqlite(Configuration["ConnectionString:DefaultConnetcion"]));
+            //services.AddDbContext<BookContext>(options => options.UseSqlite("Data Source=BookApp.db"));
+            services.AddDbContext<BookContext>(x => x.UseSqlite(Configuration.GetConnectionString("DefaultConnection")));
+            services.AddScoped<IBookRepository<Book>, BookRepository>();
+            services.AddSwaggerGen(c =>
+            {
+                c.SwaggerDoc("v1", new Swashbuckle.AspNetCore.Swagger.Info
+                {
+                    Title = "WebApiServer API",
+                    Version = "v1"
+                });
+            });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -48,6 +58,12 @@ namespace DotNetWebApiBook
 
             app.UseHttpsRedirection();
             app.UseMvc();
+
+            app.UseSwagger();
+            app.UseSwaggerUI(c =>
+            {
+                c.SwaggerEndpoint("/swagger/v1/swagger.json", "WebApiServer API V1;");
+            });
         }
     }
 }
