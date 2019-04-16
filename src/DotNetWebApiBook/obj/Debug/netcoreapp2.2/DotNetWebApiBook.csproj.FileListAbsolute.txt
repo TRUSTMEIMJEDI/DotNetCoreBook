@@ -1,0 +1,11 @@
+C:\CRC\DotNetCoreBook\src\DotNetWebApiBook\bin\Debug\netcoreapp2.2\DotNetWebApiBook.deps.json
+C:\CRC\DotNetCoreBook\src\DotNetWebApiBook\bin\Debug\netcoreapp2.2\DotNetWebApiBook.runtimeconfig.json
+C:\CRC\DotNetCoreBook\src\DotNetWebApiBook\bin\Debug\netcoreapp2.2\DotNetWebApiBook.runtimeconfig.dev.json
+C:\CRC\DotNetCoreBook\src\DotNetWebApiBook\bin\Debug\netcoreapp2.2\DotNetWebApiBook.dll
+C:\CRC\DotNetCoreBook\src\DotNetWebApiBook\obj\Debug\netcoreapp2.2\DotNetWebApiBook.csprojAssemblyReference.cache
+C:\CRC\DotNetCoreBook\src\DotNetWebApiBook\obj\Debug\netcoreapp2.2\DotNetWebApiBook.csproj.CoreCompileInputs.cache
+C:\CRC\DotNetCoreBook\src\DotNetWebApiBook\obj\Debug\netcoreapp2.2\DotNetWebApiBook.RazorAssemblyInfo.cache
+C:\CRC\DotNetCoreBook\src\DotNetWebApiBook\obj\Debug\netcoreapp2.2\DotNetWebApiBook.RazorAssemblyInfo.cs
+C:\CRC\DotNetCoreBook\src\DotNetWebApiBook\obj\Debug\netcoreapp2.2\DotNetWebApiBook.AssemblyInfoInputs.cache
+C:\CRC\DotNetCoreBook\src\DotNetWebApiBook\obj\Debug\netcoreapp2.2\DotNetWebApiBook.AssemblyInfo.cs
+C:\CRC\DotNetCoreBook\src\DotNetWebApiBook\obj\Debug\netcoreapp2.2\DotNetWebApiBook.RazorTargetAssemblyInfo.cache
