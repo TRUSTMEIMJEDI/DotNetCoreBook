@@ -11,6 +11,7 @@ namespace DotNetWebApiBook.Repository
     public class BookRepository : IBookRepository<Book>
     {
         private readonly BookContext dbcontext;
+
         public BookRepository(BookContext dbcontext)
         {
             this.dbcontext = dbcontext;
@@ -23,7 +24,7 @@ namespace DotNetWebApiBook.Repository
 
         public async Task<Book> Get(long id)
         {
-            return await dbcontext.Books.FirstOrDefaultAsync(m => m.Id == id);
+            return await dbcontext.Books.FirstOrDefaultAsync(b => b.Id == id);
         }
 
         public async Task Add(Book entity)

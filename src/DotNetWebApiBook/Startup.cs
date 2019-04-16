@@ -31,7 +31,7 @@ namespace DotNetWebApiBook
         {
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
             //services.AddDbContext<BookContext>(options => options.UseSqlite("Data Source=BookApp.db"));
-            services.AddDbContext<BookContext>(x => x.UseSqlite(Configuration.GetConnectionString("DefaultConnection")));
+            services.AddDbContext<BookContext>(options => options.UseSqlite(Configuration.GetConnectionString("DefaultConnection")));
             services.AddScoped<IBookRepository<Book>, BookRepository>();
             services.AddSwaggerGen(c =>
             {
