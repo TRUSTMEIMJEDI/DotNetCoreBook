@@ -28,7 +28,9 @@ namespace DotNetWebApiBook
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
-            services.AddDbContext<BookContext>(x => x.UseSqlite(Configuration.GetConnectionString("DefaultConnection")));
+            services.AddDbContext<BookContext>(options => options.UseSqlite("Data Source=BookApp.db"));
+            //services.AddDbContext<BookContext>(options => options.UseSqlite(Configuration.GetConnectionString("DefaultConnection")));
+            //services.AddDbContext<BookContext>(x => x.UseSqlite(Configuration["ConnectionString:DefaultConnetcion"]));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
