@@ -8,6 +8,8 @@ using System.Threading.Tasks;
 
 namespace DotNetWebApiBook.Controllers
 {
+    [Route("api/book")]
+    [ApiController]
     public class BookController : Controller
     {
         private readonly IBookRepository<Book> bookRepository;
@@ -20,9 +22,9 @@ namespace DotNetWebApiBook.Controllers
         [HttpGet]
         public async Task<IActionResult> GetAll()
         {
-            var book = await this.bookRepository.GetAll();
+            var books = await this.bookRepository.GetAll();
 
-            return Ok(book);
+            return Ok(books);
         }
 
         [HttpGet("{id}", Name = "Get")]
@@ -30,9 +32,9 @@ namespace DotNetWebApiBook.Controllers
         {
             var book = await this.bookRepository.Get(id);
 
-            if(book == null)
+            if (book == null)
             {
-                return NotFound("The book could not be found!");
+                return NotFound("The book record could not be found");
             }
 
             return Ok(book);
@@ -58,7 +60,7 @@ namespace DotNetWebApiBook.Controllers
 
             if (bookToUpdate == null)
             {
-                return NotFound("The book could not be found!");
+                return NotFound("The book record could not be found");
             }
 
             await this.bookRepository.Update(bookToUpdate, book);
@@ -66,13 +68,14 @@ namespace DotNetWebApiBook.Controllers
             return NoContent();
         }
 
+        [HttpDelete("{id}")]
         public async Task<IActionResult> Delete(long id, Book book)
         {
             var bookToDelete = await this.bookRepository.Get(id);
 
             if (bookToDelete == null)
             {
-                return NotFound("The book record could not be found!");
+                return NotFound("The book record could not be found");
             }
 
             await this.bookRepository.Delete(bookToDelete);
