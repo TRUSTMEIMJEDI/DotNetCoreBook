@@ -9,3 +9,6 @@ C:\CRC\DotNetCoreBook\src\DotNetWebApiBook\obj\Debug\netcoreapp2.2\DotNetWebApiB
 C:\CRC\DotNetCoreBook\src\DotNetWebApiBook\obj\Debug\netcoreapp2.2\DotNetWebApiBook.AssemblyInfoInputs.cache
 C:\CRC\DotNetCoreBook\src\DotNetWebApiBook\obj\Debug\netcoreapp2.2\DotNetWebApiBook.AssemblyInfo.cs
 C:\CRC\DotNetCoreBook\src\DotNetWebApiBook\obj\Debug\netcoreapp2.2\DotNetWebApiBook.RazorTargetAssemblyInfo.cache
+C:\CRC\DotNetCoreBook\src\DotNetWebApiBook\bin\Debug\netcoreapp2.2\DotNetWebApiBook.pdb
+C:\CRC\DotNetCoreBook\src\DotNetWebApiBook\obj\Debug\netcoreapp2.2\DotNetWebApiBook.dll
+C:\CRC\DotNetCoreBook\src\DotNetWebApiBook\obj\Debug\netcoreapp2.2\DotNetWebApiBook.pdb
